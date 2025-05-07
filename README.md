@@ -1,6 +1,6 @@
 ## pacman -Qqet > my-installed-packages.txt
 
--android-tools
+- android-tools
 -blueman
 -bluez-utils
 -btop
