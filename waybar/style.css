@@ -1,0 +1,81 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", "Inter", sans-serif;
+    font-size: 14px;
+    border: none;
+    border-radius: 12px;
+    padding: 0 10px;
+    margin: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #cdd6f4;
+}
+
+#workspaces {
+    background: transparent;
+}
+
+#workspaces button {
+    background: rgba(49, 50, 68, 0.5);
+    color: #a6adc8;
+    margin: 0 4px;
+
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    background: #89b4fa;
+    color: #1e1e2e;
+}
+
+#workspaces button:hover {
+    background: rgba(137, 180, 250, 0.2);
+}
+
+#custom-sysmenu {
+    font-size: 32px;
+    color: #1793D1;
+}
+
+#custom-sysupdates,
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#bluetooth,
+#tray {
+    background: rgba(49, 50, 68, 0.7);
+    margin: 4px 6px;
+    padding: 6px 14px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+#clock {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#cpu {
+    color: #a6e3a1;
+}
+
+#memory {
+    color: #f9e2af;
+}
+
+#network {
+    color: #89b4fa;
+}
+
+#pulseaudio {
+    color: #f38ba8;
+}
+
+#tray>* {
+    padding: 0 5px;
+}
