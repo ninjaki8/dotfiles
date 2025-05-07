@@ -6,9 +6,15 @@ CONFIG_DIR="$HOME/.config"
 
 echo "Linking dotfiles from $DOTFILES_DIR to $CONFIG_DIR..."
 
-# Loop through each folder in the dotfiles directory
+# Loop through each folder or file in the dotfiles directory
 for dir in "$DOTFILES_DIR"/*; do
     name=$(basename "$dir")
+
+    # Skip this script and README.md
+    if [ "$name" = "link-dotfiles.sh" ] || [ "$name" = "README.md" ]; then
+        continue
+    fi
+
     target="$CONFIG_DIR/$name"
 
     # If target exists, remove it (careful!)
@@ -23,4 +29,3 @@ for dir in "$DOTFILES_DIR"/*; do
 done
 
 echo "Done."
-
