@@ -1,32 +1,24 @@
 ## pacman -Qqet > my-installed-packages.txt
 
-- android-tools
 - blueman
 - bluez-utils
 - btop
-- cava
-- discord
-- dolphin
 - firefox
-- gamemode
 - github-cli
-- gwenview
 - hyprland
 - hyprpaper
 - hyprpolkitagent
 - kitty
 - ly
-- ncdu
+- rofi-wayland
 - neovim
 - pacman-contrib
 - pavucontrol
 - pfetch
-- qbittorrent
-- steam
-- stremio
 - ttf-jetbrains-mono-nerd
 - tumbler
 - visual-studio-code-bin
+- vulkan-radeon
 - vulkan-tools
 - waybar
 - waypaper
