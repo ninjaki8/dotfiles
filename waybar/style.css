@@ -40,6 +40,7 @@ window#waybar {
     color: #1793D1;
 }
 
+#custom-ethernet,
 #custom-sysupdates,
 #clock,
 #cpu,
@@ -53,6 +54,10 @@ window#waybar {
     padding: 6px 14px;
     border-radius: 12px;
     transition: background-color 0.3s ease;
+}
+
+#custom-ethernet{
+    color: #a6e3a1;
 }
 
 #clock {

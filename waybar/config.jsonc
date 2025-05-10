@@ -19,10 +19,16 @@
         "cpu",
         "memory",
         "network",
+        "custom/ethernet",
         "pulseaudio",
         "bluetooth",
         "tray"
     ],
+    "custom/ethernet": {
+        "exec": "~/.config/waybar/ethernet_speed.sh",
+        "interval": 60,
+        "format": "󰈀  {}"
+    },
     "custom/sysmenu": {
         "format": "󰣇",
         "tooltip": false,
