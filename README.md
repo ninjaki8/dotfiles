@@ -1,4 +1,4 @@
-🌿 Hyprland Setup
+## 🌿 Hyprland Setup
 A clean and minimal list of applications used in my Hyprland environment.
 
 - 🖥️ **Hyprland** – Wayland compositor  
