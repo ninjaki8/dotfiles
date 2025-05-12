@@ -1,4 +1,4 @@
-## 🌿 Hyprland Setup
+## 🌿 Hyprland Setup  
 A clean and minimal list of applications used in my Hyprland environment.
 
 - 🖥️ **hyprland** – Wayland compositor  
@@ -22,3 +22,5 @@ A clean and minimal list of applications used in my Hyprland environment.
 - 🔧 **vulkan-tools** – Vulkan utility tools  
 - 📝 **noto-fonts** – High-quality fonts  
 - 📊 **waybar** – Customizable bar for Wayland  
+- 🔌 **xdg-desktop-portal-hyprland** – Portal backend for Flatpak and sandboxed apps under Hyprland  
+- ⚡ **fastfetch** – Blazing fast system information tool (alternative to neofetch)  
