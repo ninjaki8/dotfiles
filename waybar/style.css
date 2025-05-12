@@ -1,11 +1,6 @@
 * {
-    font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", "Inter", sans-serif;
-    font-size: 14px;
-    border: none;
-    border-radius: 12px;
-    padding: 0 10px;
-    margin: 0;
-    min-height: 0;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
 }
 
 window#waybar {
@@ -21,6 +16,7 @@ window#waybar {
     background: rgba(49, 50, 68, 0.5);
     color: #a6adc8;
     margin: 0 4px;
+    padding: 0 25px;
 
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -35,13 +31,7 @@ window#waybar {
     background: rgba(137, 180, 250, 0.2);
 }
 
-#custom-sysmenu {
-    font-size: 32px;
-    color: #1793D1;
-}
-
-#custom-ethernet,
-#custom-sysupdates,
+#custom-updates,
 #clock,
 #cpu,
 #memory,
@@ -56,14 +46,8 @@ window#waybar {
     transition: background-color 0.3s ease;
 }
 
-#custom-ethernet{
-    color: #a6e3a1;
-}
-
-
 #clock {
     font-weight: bold;
-    font-size: 15px;
 }
 
 #cpu {

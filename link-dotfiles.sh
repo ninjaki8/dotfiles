@@ -10,8 +10,8 @@ echo "Linking dotfiles from $DOTFILES_DIR to $CONFIG_DIR..."
 for dir in "$DOTFILES_DIR"/*; do
     name=$(basename "$dir")
 
-    # Skip this script and README.md
-    if [ "$name" = "link-dotfiles.sh" ] || [ "$name" = "README.md" ]; then
+    # Skip this script, README.md, wallpapers, and scripts folders
+    if [[ "$name" == "link-dotfiles.sh" || "$name" == "README.md" || "$name" == "wallpapers" || "$name" == "scripts" ]]; then
         continue
     fi
 

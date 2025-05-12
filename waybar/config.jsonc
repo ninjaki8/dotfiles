@@ -2,55 +2,39 @@
     "layer": "top",
     "position": "top",
     "output": "DP-1",
-    "height": 43,
+    "height": 42,
+    "spacing": "4px",
     "margin-top": 8,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-left": 8,
+    "margin-right": 8,
     "modules-left": [
-        "custom/sysmenu",
-        "hyprland/workspaces",
         "hyprland/window"
     ],
     "modules-center": [
-        "clock"
+        "hyprland/workspaces"
     ],
     "modules-right": [
-        "custom/sysupdates",
         "cpu",
         "memory",
         "network",
-        "custom/ethernet",
         "pulseaudio",
+        "custom/updates",
         "bluetooth",
+        "clock",
         "tray"
     ],
-    "custom/ethernet": {
-        "exec": "~/.config/waybar/ethernet_speed.sh",
-        "interval": 60,
-        "format": "󰈀  {}"
-    },
-    "custom/sysmenu": {
-        "format": "󰣇",
-        "tooltip": false,
-        "on-click": "~/.config/waybar/powermenu.sh"
-    },
-    "custom/sysupdates": {
-        "exec": "~/.config/waybar/updates.sh",
-        "interval": 600,
-        "format": " {}",
-        "tooltip": false
-    },
     "hyprland/workspaces": {
-        "on-click": "activate",
         "format": "{name}",
+        "on-click": "activate",
         "all-outputs": true
     },
     "hyprland/window": {
-        "format": "  {title}",
+        "format": "{title}",
         "max-length": 100
     },
     "clock": {
-        "format": "{:%a %d %b | %H:%M}"
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%A, %d %B %Y}"
     },
     "cpu": {
         "format": " {usage}%"
@@ -59,7 +43,7 @@
         "format": "󰍛 {used:0.1f}G"
     },
     "network": {
-        "format-ethernet": "󰈀 {ipaddr}",
+        "format-ethernet": "󰈀 {ifname}",
         "format-disconnected": "󰖪 No Net",
         "tooltip-format": "{ifname}: {ipaddr}"
     },
@@ -85,5 +69,11 @@
     },
     "tray": {
         "spacing": 10
+    },
+    "custom/updates": {
+        "exec": "~/dotfiles/scripts/updates.sh",
+        "interval": 600,
+        "format": "{}",
+        "tooltip": false
     }
 }

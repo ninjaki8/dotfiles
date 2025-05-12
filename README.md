@@ -1,25 +1,49 @@
-## pacman -Qqet > my-installed-packages.txt
+## Hyprland 
 
-- blueman
-- bluez-utils
-- btop
-- firefox
-- github-cli
+# Core
 - hyprland
 - hyprpaper
 - hyprpolkitagent
+
+# Terminal
 - kitty
+
+# Terminal File Browser
+- yazi
+
+# Browser
+- firefox
+
+# Bluetooth
+- blueman
+- bluez-utils
+
+# System Monitor
+- btop
+
+# Coding
+- code
+- git
+- gh
+
+# Login Manager
 - ly
+
+# App Launcher
 - rofi-wayland
+
+# Terminal Editor
 - neovim
-- pacman-contrib
+
+# Audio Volume Control
 - pavucontrol
-- pfetch
-- ttf-jetbrains-mono-nerd
-- tumbler
-- visual-studio-code-bin
+
+# GPU
 - vulkan-radeon
 - vulkan-tools
+
+# Fonts
+- noto-fonts
+
+# Status Bar
 - waybar
-- waypaper
-- yay
