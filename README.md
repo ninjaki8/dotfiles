@@ -2,6 +2,9 @@
 A clean and minimal list of applications used in my Hyprland environment.
 
 
+
+
+
 - 🖥️ **Hyprland** – Wayland compositor  
 - 🖼️ **Hyprpaper** – Wallpaper daemon for Hyprland  
 - 🔐 **Hyprpolkitagent** – Polkit agent for authentication dialogs  
