@@ -8,7 +8,7 @@
 ### Terminal
 - kitty
 
-# Terminal File Browser
+### Terminal File Browser
 - yazi
 
 ### Browser
