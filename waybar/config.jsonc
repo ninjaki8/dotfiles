@@ -71,7 +71,7 @@
         "spacing": 10
     },
     "custom/updates": {
-        "exec": "~/dotfiles/scripts/updates.sh",
+        "exec": "~/.config/scripts/updates.sh",
         "interval": 600,
         "format": "{}",
         "tooltip": false

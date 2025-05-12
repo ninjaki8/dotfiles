@@ -1,22 +1,7 @@
 configuration {
-    modes: "window,drun,combi";
-    font: "JetBrainsMono Nerd Font 13";
+    modes: "window,drun";
+    font: "Noto Sans Regular 13";
     show-icons: true;
-    combi-modes: "window,drun";
-    application-fallback-icon: "application-x-executable";
-    display-window: "";
-    display-drun: "";
-
-    timeout {
-        action: "kb-cancel";
-        delay: 0;
-    }
-
-    filebrowser {
-        directories-first: true;
-        sorting-method: "name";
-    }
 }
 
 @theme "~/.config/rofi/spotlight-dark.rasi"
-
