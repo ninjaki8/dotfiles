@@ -1,49 +1,49 @@
 ## Hyprland 
 
-# Core
+### Core
 - hyprland
 - hyprpaper
 - hyprpolkitagent
 
-# Terminal
+## Terminal
 - kitty
 
 # Terminal File Browser
 - yazi
 
-# Browser
+## Browser
 - firefox
 
-# Bluetooth
+## Bluetooth
 - blueman
 - bluez-utils
 
-# System Monitor
+## System Monitor
 - btop
 
-# Coding
+## Coding
 - code
 - git
-- gh
+- github-cli
 
-# Login Manager
+## Login Manager
 - ly
 
-# App Launcher
+## App Launcher
 - rofi-wayland
 
-# Terminal Editor
+## Terminal Editor
 - neovim
 
-# Audio Volume Control
+## Audio Volume Control
 - pavucontrol
 
-# GPU
+## GPU
 - vulkan-radeon
 - vulkan-tools
 
-# Fonts
+## Fonts
 - noto-fonts
 
-# Status Bar
+## Status Bar
 - waybar
