@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Sleep 2s (waybar startup)
+sleep 2
+
 # Check for available updates and count the number of lines (packages)
 count=$(pacman -Qu | wc -l)
 
