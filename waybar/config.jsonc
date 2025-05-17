@@ -74,6 +74,8 @@
         "exec": "~/.config/scripts/updates.sh",
         "interval": 600,
         "format": "{}",
-        "tooltip": false
+        "tooltip": true,
+        "tooltip-format": "Click to check updates",
+        "on-click": "~/.config/scripts/updates.sh"
     }
 }
