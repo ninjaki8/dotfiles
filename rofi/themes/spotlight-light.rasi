@@ -91,7 +91,7 @@ element selected normal, element selected active {
 }
 
 element-icon {
-    size:   1em;
+    size:   1.6em;
 }
 
 element-text {
