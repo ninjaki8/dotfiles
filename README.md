@@ -1,26 +1,48 @@
-## 🌿 Hyprland Setup  
-A clean and minimal list of applications used in my Hyprland environment.
+## Hyprland Setup – Installed Packages
 
-- 🖥️ **hyprland** – Wayland compositor  
-- 🖼️ **hyprpaper** – Wallpaper daemon for Hyprland  
-- 🔐 **hyprpolkitagent** – Polkit agent for authentication dialogs  
-- 🪟 **uwsm** – Minimalistic wrapper for **Hyprland** to streamline configuration and improve ease of use  
-- 🧾 **kitty** – Fast, GPU-based terminal emulator  
-- 📁 **yazi** – Blazing fast terminal file manager  
-- 🦊 **firefox** – Open-source web browser  
-- 🔊 **pavucontrol** – Audio volume control tool  
-- 🔵 **blueman** – Bluetooth manager  
-- 🛠️ **bluez-utils** – Required utilities for Bluetooth  
-- 📈 **btop** – Resource monitor  
-- 🧠 **neovim** – Terminal-based code editor  
-- 🧑‍💻 **code** (`VS Code`) – GUI code editor  
-- 🌀 **git** – Version control system  
-- 🐙 **github-cli** – Interact with GitHub from the terminal  
-- 🔑 **ly** – Lightweight TUI login manager  
-- 🎯 **rofi-wayland** – Window switcher, application launcher, and more  
-- 🧱 **vulkan-radeon** – Vulkan driver for AMD GPUs  
-- 🔧 **vulkan-tools** – Vulkan utility tools  
-- 📝 **noto-fonts** – High-quality fonts  
-- 📊 **waybar** – Customizable bar for Wayland  
-- 🔌 **xdg-desktop-portal-hyprland** – Portal backend for Flatpak and sandboxed apps under Hyprland  
-- ⚡ **fastfetch** – Blazing fast system information tool (alternative to neofetch)  
+### 🟥 Tier 1 – Core for Hyprland to Run and Work Properly
+- `hyprland`
+- `xdg-desktop-portal-hyprland`
+- `uwsm`
+- `swaybg`
+- `swaylock-effects`
+- `waybar`
+- `rofi-wayland`
+- `hyprpolkitagent`
+- `qt5-wayland`
+
+### 🟧 Tier 2 – System Management & Desktop Usability
+- `networkmanager`
+- `blueman`
+- `bluez-utils`
+- `pavucontrol`
+- `ly`
+- `nwg-look`
+- `man-db`
+- `ntfs-3g`
+- `bash-completion`
+
+### 🟨 Tier 3 – Development and CLI Tools
+- `git`
+- `github-cli`
+- `go`
+- `neovim`
+- `kitty`
+- `wget`
+- `fastfetch`
+
+### 🟩 Tier 4 – Optional / Personal Preference Apps
+- `keepassxc`
+- `yazi`
+- `gnome-themes-extra`
+- `ttf-jetbrains-mono-nerd`
+
+---
+
+## AUR Packages
+- `brave-bin`
+- `swaylock-effects`
+- `visual-studio-code-bin`
+- `waypaper`
+- `wlogout`
+- `yay`
