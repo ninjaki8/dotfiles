@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Optional: use your own path to brave if needed
-BRAVE_BIN="/sbin/brave"
+BRAVE_BIN="$(which brave)"
 
 # Force Wayland + Vulkan + Hardware Acceleration
 env \
@@ -10,10 +10,9 @@ env \
   LIBVA_DRIVER_NAME=radeonsi \
   $BRAVE_BIN \
   --ozone-platform=wayland \
-  --enable-features=UseOzonePlatform,WebGPU \
+  --enable-features=UseOzonePlatform,VaapiVideoDecoder,WebGPU \
   --use-vulkan \
   --enable-zero-copy \
   --ignore-gpu-blocklist \
   --password-store=basic \
   "$@"
-
