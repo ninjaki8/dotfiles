@@ -31,6 +31,7 @@ window#waybar {
     background: rgba(137, 180, 250, 0.2);
 }
 
+#custom-wlogout,
 #custom-updates,
 #clock,
 #cpu,
@@ -42,7 +43,7 @@ window#waybar {
     background: rgba(49, 50, 68, 0.7);
     margin: 4px 6px;
     padding: 6px 14px;
-    border-radius: 12px;
+    border-radius: 10px;
     transition: background-color 0.3s ease;
 }
 
