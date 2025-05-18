@@ -41,7 +41,7 @@
 ---
 
 ## AUR Packages
-- `brave-bin`
+- `zen-browser-bin`
 - `swaylock-effects`
 - `visual-studio-code-bin`
 - `waypaper`
