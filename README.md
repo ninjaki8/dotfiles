@@ -1,17 +1,15 @@
 ## Hyprland Setup – Installed Packages
 
-### 🟥 Tier 1 – Core for Hyprland to Run and Work Properly
+## Official Repository
 - `hyprland`
+- `hyprpaper`
+- `hyprlock`
+- `hyprpolkitagent`
 - `xdg-desktop-portal-hyprland`
 - `uwsm`
-- `swaybg`
-- `swaylock-effects`
 - `waybar`
 - `rofi-wayland`
-- `hyprpolkitagent`
 - `qt5-wayland`
-
-### 🟧 Tier 2 – System Management & Desktop Usability
 - `firefox`
 - `networkmanager`
 - `blueman`
@@ -24,8 +22,6 @@
 - `bash-completion`
 - `cliphist`
 - `wl-clipboard`
-
-### 🟨 Tier 3 – Development and CLI Tools
 - `git`
 - `github-cli`
 - `go`
@@ -33,8 +29,6 @@
 - `kitty`
 - `wget`
 - `fastfetch`
-
-### 🟩 Tier 4 – Optional / Personal Preference Apps
 - `keepassxc`
 - `yazi`
 - `gnome-themes-extra`
@@ -44,7 +38,6 @@
 ---
 
 ## AUR Packages
-- `swaylock-effects`
 - `visual-studio-code-bin`
 - `waypaper`
 - `wlogout`

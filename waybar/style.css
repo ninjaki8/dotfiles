@@ -51,18 +51,6 @@ window#waybar {
     margin: 4px;
 }
 
-#keyboard-state:hover,
-#custom-updates:hover,
-#clock:hover,
-#cpu:hover,
-#memory:hover,
-#network:hover,
-#pulseaudio:hover,
-#bluetooth:hover,
-#tray:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
 #keyboard-state {
     color: #97e1ad; /* Lime */
 }

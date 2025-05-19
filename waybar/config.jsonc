@@ -13,7 +13,8 @@
         "tray"
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/window",
+        "custom/test"
     ],
     "modules-right": [
         "keyboard-state",
