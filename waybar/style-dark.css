@@ -40,6 +40,7 @@ window#waybar {
     color: #fff;
 }
 
+#keyboard-state,
 #custom-updates,
 #clock,
 #cpu,
@@ -52,6 +53,7 @@ window#waybar {
     margin: 4px;
 }
 
+#keyboard-state:hover,
 #custom-updates:hover,
 #clock:hover,
 #cpu:hover,
@@ -61,6 +63,10 @@ window#waybar {
 #bluetooth:hover,
 #tray:hover {
     background: rgba(255, 255, 255, 0.1);
+}
+
+#keyboard-state {
+    color: #97e1ad; /* Lime */
 }
 
 #cpu {

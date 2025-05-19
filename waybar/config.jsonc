@@ -16,6 +16,7 @@
         "hyprland/window"
     ],
     "modules-right": [
+        "keyboard-state",
         "cpu",
         "memory",
         "custom/updates",
@@ -36,6 +37,14 @@
     "clock": {
         "format": "{:%H:%M}",
         "tooltip-format": "{:%A, %d %B %Y}"
+    },
+    "keyboard-state": {
+        "capslock": true,
+        "format": "{icon}",
+        "format-icons": {
+            "locked": " CAPS",
+            "unlocked": ""
+        }
     },
     "cpu": {
         "format": " {usage}%"
