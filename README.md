@@ -22,6 +22,8 @@
 - `man-db`
 - `ntfs-3g`
 - `bash-completion`
+- `cliphist`
+- `wl-clipboard`
 
 ### 🟨 Tier 3 – Development and CLI Tools
 - `git`
