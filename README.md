@@ -12,6 +12,7 @@
 - `qt5-wayland`
 
 ### 🟧 Tier 2 – System Management & Desktop Usability
+- `firefox`
 - `networkmanager`
 - `blueman`
 - `bluez-utils`
@@ -41,7 +42,6 @@
 ---
 
 ## AUR Packages
-- `zen-browser-bin`
 - `swaylock-effects`
 - `visual-studio-code-bin`
 - `waypaper`

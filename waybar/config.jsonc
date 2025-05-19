@@ -46,7 +46,7 @@
     "network": {
         "format-ethernet": "󰈀 {ifname}",
         "format-disconnected": "󰖪 No Net",
-        "tooltip-format": "{ifname}: {ipaddr}"
+        "tooltip-format": "{ipaddr}"
     },
     "pulseaudio": {
         "format": "  {volume}%",
@@ -76,12 +76,13 @@
         "interval": 600,
         "format": "{}",
         "tooltip": true,
-        "tooltip-format": "Click to check updates",
+        "tooltip-format": "System Updates",
         "on-click": "~/.config/scripts/updates.sh"
     },
     "custom/wlogout": {
-        "format": "",
-        "tooltip": false,
+        "format": " ",
+        "tooltip": true,
+        "tooltip-format": "Power Menu",
         "on-click": "~/.config/scripts/wlogout.sh"
     }
 }

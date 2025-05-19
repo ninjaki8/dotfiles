@@ -5,12 +5,13 @@
 }
 
 window#waybar {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    background: rgba(12, 12, 12, 0.7); /* Darker background */
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #workspaces {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(30, 30, 30, 0.4);
 }
 
 #workspaces button {
@@ -20,12 +21,13 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    color: #fff;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 #workspaces button.active {
-    background: #fff;
-    color: #E94560; /* Neon pink */
+    background: #E94560;
+    color: #000000;
 }
 
 #custom-wlogout,
@@ -50,41 +52,41 @@ window#waybar {
 #pulseaudio:hover,
 #bluetooth:hover,
 #tray:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 #cpu {
-    color: #00DBDE; /* Cyan */
+    color: #00DBDE;
 }
 
 #memory {
-    color: #FC00FF; /* Purple */
+    color: #FC00FF;
 }
 
 #network {
-    color: #89B4FA; /* Blue */
+    color: #89B4FA;
 }
 
 #pulseaudio {
-    color: #F5C2E7; /* Pink */
+    color: #F5C2E7;
 }
 
 #bluetooth {
-    color: #21D4FD; /* Electric blue */
+    color: #21D4FD;
 }
 
 #clock {
-    color: #F9E2AF; /* Yellow */
+    color: #F9E2AF;
 }
 
 #custom-updates {
-    color: #FF9A8B; /* Coral */
+    color: #FF9A8B;
 }
 
 #custom-wlogout {
-    color: #FF2079; /* Hot pink */
+    color: #FF2079;
 }
 
-#tray>* {
+#tray > * {
     padding: 0 5px;
 }
