@@ -8,7 +8,9 @@
     "margin-left": 8,
     "margin-right": 8,
     "modules-left": [
-        "hyprland/workspaces"
+        "custom/wlogout",
+        "hyprland/workspaces",
+        "tray"
     ],
     "modules-center": [
         "hyprland/window"
@@ -16,13 +18,11 @@
     "modules-right": [
         "cpu",
         "memory",
-        "network",
-        "pulseaudio",
         "custom/updates",
         "bluetooth",
-        "clock",
-        "tray",
-        "custom/wlogout"
+        "network",
+        "pulseaudio",
+        "clock"
     ],
     "hyprland/workspaces": {
         "format": "{name}",

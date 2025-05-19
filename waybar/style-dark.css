@@ -27,10 +27,19 @@ window#waybar {
 
 #workspaces button.active {
     background: #E94560;
-    color: #000000;
+    color: #fff;
 }
 
-#custom-wlogout,
+#custom-wlogout{
+    padding: 0 20px;
+    margin: 0 8px;
+}
+
+#custom-wlogout:hover{
+    background-color: #FF2079; /* Hot pink */
+    color: #fff;
+}
+
 #custom-updates,
 #clock,
 #cpu,
@@ -43,7 +52,6 @@ window#waybar {
     margin: 4px;
 }
 
-#custom-wlogout:hover,
 #custom-updates:hover,
 #clock:hover,
 #cpu:hover,
