@@ -1,17 +1,17 @@
 * {
-    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-family: "Noto Sans Mono", monospace;
     font-size: 14px;
     border-radius: 8px;
 }
 
 window#waybar {
-    background: rgba(12, 12, 12, 0.7); /* Darker background */
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
 
 #workspaces {
-    background: rgba(30, 30, 30, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+    margin-right: 15px;
 }
 
 #workspaces button {
@@ -21,13 +21,12 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
 
 #workspaces button.active {
-    background: #E94560;
-    color: #fff;
+    background: #fff;
+    color: #E94560; /* Neon pink */
 }
 
 #custom-wlogout{
@@ -58,37 +57,37 @@ window#waybar {
 }
 
 #cpu {
-    color: #00DBDE;
+    color: #00DBDE; /* Cyan */
 }
 
 #memory {
-    color: #FC00FF;
+    color: #FC00FF; /* Purple */
 }
 
 #network {
-    color: #89B4FA;
+    color: #89B4FA; /* Blue */
 }
 
 #pulseaudio {
-    color: #F5C2E7;
+    color: #F5C2E7; /* Pink */
 }
 
 #bluetooth {
-    color: #21D4FD;
+    color: #21D4FD; /* Electric blue */
 }
 
 #clock {
-    color: #F9E2AF;
+    color: #F9E2AF; /* Yellow */
 }
 
 #custom-updates {
-    color: #FF9A8B;
+    color: #FF9A8B; /* Coral */
 }
 
 #custom-wlogout {
-    color: #FF2079;
+    color: #FF2079; /* Hot pink */
 }
 
-#tray > * {
+#tray>* {
     padding: 0 5px;
 }

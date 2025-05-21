@@ -10,11 +10,10 @@
     "modules-left": [
         "custom/wlogout",
         "hyprland/workspaces",
-        "tray"
+        "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/window",
-        "custom/test"
+        "clock"
     ],
     "modules-right": [
         "keyboard-state",
@@ -24,7 +23,7 @@
         "bluetooth",
         "network",
         "pulseaudio",
-        "clock"
+        "tray"
     ],
     "hyprland/workspaces": {
         "format": "{name}",
@@ -33,7 +32,7 @@
     },
     "hyprland/window": {
         "format": "{title}",
-        "max-length": 100
+        "icons": true
     },
     "clock": {
         "format": "{:%H:%M}",

@@ -4,4 +4,4 @@ configuration {
     show-icons: true;
 }
 
-@theme "~/.config/rofi/themes/spotlight-light.rasi"
+@theme "~/.config/rofi/themes/spotlight-dark.rasi"

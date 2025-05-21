@@ -34,6 +34,8 @@
 - `gnome-themes-extra`
 - `ttf-jetbrains-mono-nerd`
 - `jq`
+- `mako`
+- `papirus-icon-theme`
 
 ---
 
