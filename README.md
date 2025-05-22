@@ -36,6 +36,7 @@
 - `jq`
 - `mako`
 - `papirus-icon-theme`
+- `pacman-contrib`
 
 ---
 
