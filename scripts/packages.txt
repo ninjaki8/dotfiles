@@ -30,7 +30,9 @@ keepassxc
 yazi
 gnome-themes-extra
 ttf-jetbrains-mono-nerd
+papirus-icon-theme
 jq
+pacman-contrib
 aur/visual-studio-code-bin
 aur/waypaper
 aur/wlogout

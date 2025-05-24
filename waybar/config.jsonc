@@ -32,7 +32,7 @@
     },
     "hyprland/window": {
         "format": "{title}",
-        "icons": true
+        "icon": true
     },
     "clock": {
         "format": "{:%H:%M}",
