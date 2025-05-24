@@ -30,7 +30,6 @@
 - `wget`
 - `fastfetch`
 - `keepassxc`
-- `yazi`
 - `gnome-themes-extra`
 - `ttf-ubuntu-mono-nerd`
 - `ttf-ubuntu-nerd`

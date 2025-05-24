@@ -5,7 +5,6 @@
 
 window#waybar {
     background: rgba(21, 21, 21, 0.7);
-    /* Darker background */
     color: #ffffff;
     font-size: 16px;
 }
@@ -37,7 +36,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: #E94560;
+    background: #E94560; /* Neon pink */
     color: #fff;
     border-radius: 28px 0 28px 0px;
 }
