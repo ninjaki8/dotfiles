@@ -32,7 +32,8 @@
 - `keepassxc`
 - `yazi`
 - `gnome-themes-extra`
-- `ttf-jetbrains-mono-nerd`
+- `ttf-ubuntu-mono-nerd`
+- `ttf-ubuntu-nerd`
 - `jq`
 - `mako`
 - `papirus-icon-theme`

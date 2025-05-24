@@ -1,43 +1,53 @@
 * {
-    font-family: "JetBrainsMono Nerd Font", monospace;
-    font-size: 14px;
+    font-family: "Ubuntu Nerd Font", sans-serif;
     border-radius: 8px;
 }
 
 window#waybar {
-    background: rgba(12, 12, 12, 0.7); /* Darker background */
+    background: rgba(21, 21, 21, 0.7);
+    /* Darker background */
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 16px;
 }
 
 #workspaces {
-    background: rgba(30, 30, 30, 0.4);
-    margin-right: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 15px;
+    border-radius: 28px 0 28px 0px;
+}
+
+#workspaces button.persistent {
+    font-size: 20px;
 }
 
 #workspaces button {
-    padding: 0 18px;
+    padding: 0 24px;
     color: #E94560; /* Neon pink */
     border: none;
+}
+
+#workspaces button.empty {
+    color: #5c5c5c;
 }
 
 #workspaces button:hover {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.1);
+    border-radius: 28px 0 28px 0px;
 }
 
 #workspaces button.active {
     background: #E94560;
     color: #fff;
+    border-radius: 28px 0 28px 0px;
 }
 
-#custom-wlogout{
-    padding: 0 20px;
-    margin: 0 8px;
+#custom-wlogout {
+    padding-left: 20px;
+    font-size: 20px;
 }
 
-#custom-wlogout:hover{
-    background-color: #FF2079; /* Hot pink */
+#custom-wlogout:hover {
     color: #fff;
 }
 
@@ -52,10 +62,12 @@ window#waybar {
 #tray {
     padding: 0 12px;
     margin: 4px;
+    font-size: 14px;
 }
 
 #keyboard-state {
-    color: #97e1ad; /* Lime */
+    color: #97e1ad;
+    /* Lime */
 }
 
 #cpu {
@@ -79,7 +91,7 @@ window#waybar {
 }
 
 #clock {
-    color: #F9E2AF;
+    color: #fff;
 }
 
 #custom-updates {
@@ -90,6 +102,6 @@ window#waybar {
     color: #FF2079;
 }
 
-#tray > * {
+#tray>* {
     padding: 0 5px;
 }
