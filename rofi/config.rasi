@@ -25,9 +25,11 @@ configuration {
     color5: #CCCCCC;
     foreground: #000000;
     background: #CCCCCC;
-    pink: #E94560;
+    pink: #E48977FF;
     pink-darker: #C53C54;
     button: #444444;
+
+    header:url("~/.config/wallpapers/rofi_header.jpg", width);
 }
 
 // Main //
@@ -40,7 +42,7 @@ window {
     cursor:                      "default";
     spacing:                     0em;
     padding:                     0em;
-    border:                      0.5em;
+    border:                      0em;
     border-color:                @color5;
     border-radius:               2em;
     background-color:            @background;
@@ -53,6 +55,7 @@ mainbox {
     orientation:                 vertical;
     children:                    [ "inputbar" , "listbox" ];
     background-color:            @pink-darker;
+    background-image:            @header;
 }
 
 
