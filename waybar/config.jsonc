@@ -61,9 +61,11 @@
         "format": " {used:0.1f}G"
     },
     "network": {
-        "format-ethernet": "󰈀 {ifname}",
+        "interface": "enp34s0",
+        "format": "󰛳 Online",
         "format-disconnected": "󰖪 No Net",
-        "tooltip-format": "{ipaddr}"
+        "tooltip-format": "IP: {ipaddr}\nDown: {bandwidthDownBytes}\nUp: {bandwidthUpBytes}",
+        "interval": 1
     },
     "pulseaudio": {
         "format": "  {volume}%",
