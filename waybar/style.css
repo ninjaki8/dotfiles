@@ -53,6 +53,7 @@ window#waybar {
 
 #custom-layout,
 #keyboard-state,
+#language,
 #custom-pacman,
 #clock,
 #cpu,
@@ -69,29 +70,33 @@ window#waybar {
 #custom-layout{
     font-weight: bold;
 }
+
+#language{
+    color: #ccc;
+}
+
 #keyboard-state {
-    color: #97e1ad;
-    /* Lime */
+    color: #00FF7F; /* Spring Green */
 }
 
 #cpu {
-    color: #00dbde;
+    color: #40E0D0; /* Turquoise */
 }
 
 #memory {
-    color: #fc00ff;
+    color: #DA70D6; /* Orchid */
 }
 
 #network {
-    color: #89b4fa;
+    color: #DAA520; /* Goldenrod */
 }
 
 #pulseaudio {
-    color: #f5c2e7;
+    color: #FF6F61; /* Coral */
 }
 
 #bluetooth {
-    color: #21d4fd;
+    color: #00BFFF; /* Electric Blue */
 }
 
 #clock {

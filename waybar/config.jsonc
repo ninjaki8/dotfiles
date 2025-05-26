@@ -24,6 +24,7 @@
         "bluetooth",
         "network",
         "pulseaudio",
+        "hyprland/language",
         "tray"
     ],
     "hyprland/workspaces": {
@@ -55,6 +56,12 @@
             "locked": "󰪛 on",
             "unlocked": "󰪛 off"
         }
+    },
+    "hyprland/language": {
+        "format": "  {}",
+        "format-en": "English (US)",
+        "format-gr": "Greek (GR)",
+        "keyboard-name": "keychron-lemokey-x1-keyboard"
     },
     "cpu": {
         "format": " {usage}%"
