@@ -34,7 +34,10 @@
 - `ttf-ubuntu-mono-nerd`
 - `ttf-ubuntu-nerd`
 - `jq`
-- `mako`
+- `dunst`
+- `gnome-calendar`
+- `gnome-calculator`
+- `gnome-clocks`
 - `papirus-icon-theme`
 - `pacman-contrib`
 
