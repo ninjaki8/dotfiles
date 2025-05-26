@@ -9,6 +9,7 @@
     "margin-right": 8,
     "modules-left": [
         "custom/wlogout",
+        "custom/layout",
         "hyprland/workspaces",
         "hyprland/window"
     ],
@@ -16,10 +17,10 @@
         "clock"
     ],
     "modules-right": [
-        "keyboard-state",
         "cpu",
         "memory",
-        "custom/updates",
+        "custom/pacman",
+        "keyboard-state",
         "bluetooth",
         "network",
         "pulseaudio",
@@ -51,15 +52,15 @@
         "capslock": true,
         "format": "{icon}",
         "format-icons": {
-            "locked": " CAPS",
-            "unlocked": ""
+            "locked": "󰪛 on",
+            "unlocked": "󰪛 off"
         }
     },
     "cpu": {
         "format": " {usage}%"
     },
     "memory": {
-        "format": "󰍛 {used:0.1f}G"
+        "format": " {used:0.1f}G"
     },
     "network": {
         "format-ethernet": "󰈀 {ifname}",
@@ -73,14 +74,14 @@
     "bluetooth": {
         "format": "{icon}",
         "format-connected": " {device_alias}",
-        "format-on": " on",
-        "format-off": " off",
-        "format-disabled": " disabled",
-        "format-no-controller": "",
+        "format-on": " on",
+        "format-off": " off",
+        "format-disabled": " disabled",
+        "format-no-controller": "",
         "format-icons": {
-            "enabled": "",
-            "disabled": "",
-            "connected": ""
+            "enabled": "",
+            "disabled": "",
+            "connected": ""
         },
         "tooltip": true,
         "tooltip-format": "Bluetooth: {status}",
@@ -97,10 +98,31 @@
         "tooltip-format": "System Updates",
         "on-click": "~/.config/scripts/updates.sh"
     },
+    "custom/pacman": {
+        "format": "󰏖 {}",
+        "interval": 3600, // every hour
+        "exec": "checkupdates | wc -l", // # of updates
+        "exec-if": "exit 0", // always run; consider advanced run conditions
+        "on-click": "kitty -e sudo pacman -Syu; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8
+    },
     "custom/wlogout": {
         "format": " ",
         "tooltip": true,
         "tooltip-format": "Power Menu",
         "on-click": "~/.config/scripts/wlogout.sh"
+    },
+    "custom/layout": {
+        "exec": "~/.config/scripts/toggle-layout.sh layout",
+        "on-click": "~/.config/scripts/toggle-layout.sh toggle",
+        "interval": "once",
+        "signal": 9,
+        "format": "{text}",
+        "format-icons": {
+            "dwindle": "󰕴",
+            "master": "󰙀"
+        },
+        "return-type": "json",
+        "tooltip": true
     }
 }

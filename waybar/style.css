@@ -20,8 +20,9 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0 24px;
-    color: #E94560; /* Neon pink */
+    padding: 0 20px;
+    color: #e94560;
+    /* Neon pink */
     border: none;
 }
 
@@ -36,7 +37,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: #E94560; /* Neon pink */
+    background: #e94560; /* Neon pink */
     color: #fff;
     border-radius: 28px 0 28px 0px;
 }
@@ -50,8 +51,9 @@ window#waybar {
     color: #fff;
 }
 
+#custom-layout,
 #keyboard-state,
-#custom-updates,
+#custom-pacman,
 #clock,
 #cpu,
 #memory,
@@ -61,44 +63,49 @@ window#waybar {
 #tray {
     padding: 0 12px;
     margin: 4px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
+#custom-layout{
+    font-weight: bold;
+}
 #keyboard-state {
     color: #97e1ad;
     /* Lime */
 }
 
 #cpu {
-    color: #00DBDE;
+    color: #00dbde;
 }
 
 #memory {
-    color: #FC00FF;
+    color: #fc00ff;
 }
 
 #network {
-    color: #89B4FA;
+    color: #89b4fa;
 }
 
 #pulseaudio {
-    color: #F5C2E7;
+    color: #f5c2e7;
 }
 
 #bluetooth {
-    color: #21D4FD;
+    color: #21d4fd;
 }
 
 #clock {
     color: #fff;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-#custom-updates {
-    color: #FF9A8B;
+#custom-pacman {
+    color: #ff9a8b;
 }
 
 #custom-wlogout {
-    color: #FF2079;
+    color: #ff2079;
 }
 
 #tray>* {
