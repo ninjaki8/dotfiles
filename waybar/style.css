@@ -52,7 +52,6 @@ window#waybar {
 }
 
 #custom-layout,
-#keyboard-state,
 #language,
 #custom-pacman,
 #clock,
@@ -63,7 +62,7 @@ window#waybar {
 #bluetooth,
 #tray {
     padding: 0 12px;
-    margin: 4px;
+    margin: 0 4px;
     font-size: 15px;
 }
 
@@ -72,11 +71,7 @@ window#waybar {
 }
 
 #language{
-    color: #ccc;
-}
-
-#keyboard-state {
-    color: #00FF7F; /* Spring Green */
+    color: #fff;
 }
 
 #cpu {
