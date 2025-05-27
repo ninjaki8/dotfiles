@@ -32,13 +32,4 @@ new_volume=$(pamixer --get-volume)
 audio_server=$(pactl info 2>/dev/null | grep "Server Name" | cut -d ':' -f2- | xargs)
 
 # Send notification
-# -a appname
-# -h <string> to replace notifications
-# title
-# body
-# -h int:value for progress bar
-dunstify -a "Audio" \
-    -h string:x-canonical-private-synchronous:audio \
-    "Volume: $new_volume%" \
-    "$audio_server" \
-    -h int:value:"$new_volume"
+notify-send -a "Audio" "Volume: $new_volume%" "$audio_server" -h int:value:"$new_volume" -h string:x-dunst-stack-tag:volume
