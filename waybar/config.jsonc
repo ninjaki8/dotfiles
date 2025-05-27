@@ -70,6 +70,9 @@
     "pulseaudio": {
         "format": "  {volume}%",
         "format-muted": " Muted",
+        "scroll-step": 5,
+        "on-scroll-up": "~/.config/scripts/volume.sh 5",
+        "on-scroll-down": "~/.config/scripts/volume.sh -5",
         "on-click": "pavucontrol"
     },
     "bluetooth": {
