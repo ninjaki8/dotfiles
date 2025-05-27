@@ -34,8 +34,8 @@
         "format-icons": {
             "1": "", // Terminal
             "2": "", // Browser
-            "3": "", // Files
-            "4": "󰨞" // Code
+            "3": "󰨞", // Code
+            "4": ""  // Files
         },
         "persistent-workspaces": {
             "*": 4
