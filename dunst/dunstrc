@@ -59,7 +59,7 @@
     enable_recursive_icon_lookup = true
     icon_theme = Papirus-Dark, Adwaita
     icon_position = left
-    min_icon_size = 32
+    min_icon_size = 48
     max_icon_size = 128
 
     ### History ###
@@ -114,3 +114,8 @@
     summary = "*Volume:*"
     new_icon = audio-volume-high
     timeout = 2
+
+[hyprland]
+    appname = "Hyprland"
+    summary = "*Hyprland*"
+    new_icon = preferences-system
