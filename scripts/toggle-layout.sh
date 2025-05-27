@@ -22,10 +22,10 @@ fi
 # Otherwise, perform toggle
 if [[ "$current_layout" == "dwindle" ]]; then
     hyprctl keyword general:layout "master" > /dev/null
-    dunstify "Hyprland: Layout" "Switched to Master layout"
+    notify-send "Hyprland" "Switched to Master layout"
 else
     hyprctl keyword general:layout "dwindle" > /dev/null
-    dunstify "Hyprland: Layout" "Switched to Dwindle layout"
+    notify-send "Hyprland" "Switched to Dwindle layout"
 fi
 
 # Send signal to Waybar to refresh the module (signal 9)
