@@ -12,7 +12,3 @@ PS1='[\u@\h \W]\$ '
 
 fastfetch --logo small -s break:os:kernel:host:uptime:shell
 printf "\n"
-
-# env for go
-export PATH=$PATH:$(go env GOPATH)/bin
-

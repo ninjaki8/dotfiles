@@ -3,7 +3,7 @@
 # Function to check if the given name matches any of the allowed app names
 check_app() {
   local input="$1"
-  local apps=("kitty" "hypr" "rofi" "scripts" "wallpapers" "waybar" "wlogout" "dunst")
+  local apps=("kitty" "hypr" "rofi" "scripts" "wallpapers" "waybar" "wlogout" "dunst" "uwsm")
 
   # Loop through each app name and compare with the input
   for app in "${apps[@]}"; do

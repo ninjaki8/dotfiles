@@ -1,0 +1,6 @@
+export XCURSOR_SIZE=24
+export HYPRCURSOR_SIZE=24
+export GTK_THEME=Adwaita-dark
+export GTK_ICON_THEME=Papirus
+export GTK_FONT_NAME="Ubuntu Nerd Font 11"
+export PATH=$PATH:$(go env GOPATH)/bin
