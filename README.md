@@ -30,14 +30,15 @@
 - `wget`
 - `fastfetch`
 - `keepassxc`
-- `gnome-themes-extra`
 - `ttf-ubuntu-mono-nerd`
 - `ttf-ubuntu-nerd`
 - `jq`
 - `dunst`
+- `gnome-themes-extra`
 - `gnome-calendar`
 - `gnome-calculator`
 - `gnome-clocks`
+- `gnome-weather`
 - `papirus-icon-theme`
 - `pacman-contrib`
 - `pamixer`

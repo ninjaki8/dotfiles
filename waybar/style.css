@@ -62,7 +62,6 @@ window#waybar {
 #bluetooth,
 #tray {
     padding: 0 12px;
-    margin: 0 4px;
     font-size: 15px;
 }
 
@@ -96,8 +95,6 @@ window#waybar {
 
 #clock {
     color: #fff;
-    font-weight: bold;
-    font-size: 16px;
 }
 
 #custom-pacman {

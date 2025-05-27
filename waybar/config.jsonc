@@ -5,8 +5,8 @@
     "height": 42,
     "spacing": "4px",
     "margin-top": 10,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-left": 8,
+    "margin-right": 8,
     "modules-left": [
         "custom/wlogout",
         "custom/layout",
@@ -24,6 +24,7 @@
         "network",
         "pulseaudio",
         "hyprland/language",
+        "clock#tray",
         "tray"
     ],
     "hyprland/workspaces": {
@@ -45,8 +46,13 @@
         "icon": true
     },
     "clock": {
+        "format": "{:%A, %d %B %Y}",
+        "tooltip": false,
+        "on-click": "gnome-calendar"
+    },
+    "clock#tray": {
         "format": "{:%H:%M}",
-        "tooltip-format": "{:%A, %d %B %Y}"
+        "tooltip": false
     },
     "hyprland/language": {
         "format": "  {}",
