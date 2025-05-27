@@ -40,6 +40,7 @@
 - `gnome-clocks`
 - `papirus-icon-theme`
 - `pacman-contrib`
+- `pamixer`
 
 ---
 
