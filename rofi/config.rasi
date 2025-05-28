@@ -22,19 +22,16 @@ configuration {
     white: #FFFFFF;
     black: #000000;
     color11: #FFFFFF;
-    color5: #CCCCCC;
+    color5:rgba(255, 255, 255, 0.8);
     foreground: #000000;
     background: #CCCCCC;
     pink: #E48977FF;
-    pink-darker: #C53C54;
-    button: #444444;
-
-    header:url("~/.config/wallpapers/rofi_header.jpg", width);
+    button:rgba(68, 68, 68, 0.8);
+    button-selected:rgb(240, 66, 66);
 }
 
 // Main //
 window {
-    height:                      35em;
     width:                       56em;
     transparency:                "real";
     fullscreen:                  false;
@@ -54,8 +51,8 @@ mainbox {
     padding:                     0em;
     orientation:                 vertical;
     children:                    [ "inputbar" , "listbox" ];
-    background-color:            @pink-darker;
-    background-image:            @header;
+    background-image:            linear-gradient(45deg,rgb(47, 43, 66),rgb(140, 140, 170));
+
 }
 
 
@@ -63,7 +60,7 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     0;
-    padding:                     5em;
+    padding:                     4em;
     children:                    [ "textbox-custom-prompt", "entry" ];
     background-color:            transparent;
 }
@@ -93,19 +90,19 @@ entry {
 
 // Lists //
 listbox {
-    padding:                     0em;
+    padding:                     0.5em;
     spacing:                     0em;
     orientation:                 horizontal;
-    children:                    [ "listview" , "mode-switcher" ];
+    children:                    [ "listview"]; // can add ,"mode-switcher"
     background-color:            @color5;
 }
 
 listview {
     border:                      0;
     padding:                     1.5em;
-    spacing:                     0.5em;
+    spacing:                     1em;
     enabled:                     true;
-    columns:                     2;
+    columns:                     3;
     lines:                       4;
     cycle:                       true;
     dynamic:                     true;
@@ -138,7 +135,7 @@ button {
 }
 
 button selected {
-    background-color:            @pink;
+    background-color:            @button-selected;
     text-color:                  @white;
 }
 
