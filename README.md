@@ -17,6 +17,7 @@
 - `pavucontrol`
 - `ly`
 - `nwg-look`
+- `nwg-displays`
 - `man-db`
 - `ntfs-3g`
 - `bash-completion`
