@@ -16,7 +16,7 @@ check_app() {
 }
 
 # Set the current working directory as the base for dotfiles
-SCRIPT_DIR="$(pwd)"
+SCRIPT_DIR="$HOME/dotfiles/.config"
 
 # Set the target configuration directory (usually where app configs live)
 CONFIG_DIR="$HOME/.config"
@@ -50,13 +50,3 @@ for dir in "$SCRIPT_DIR"/*; do
     echo -e "${GREEN}[Linked]${NC} $name -> $target"
   fi
 done
-
-# Special case: link .bashrc to $HOME/.bashrc
-BASHRC="$SCRIPT_DIR/.bashrc"
-if [ -e "$BASHRC" ]; then
-    if [ -e "$HOME/.bashrc" ] || [ -L "$HOME/.bashrc" ]; then
-        rm -rf "$HOME/.bashrc"
-    fi
-    ln -s "$BASHRC" "$HOME/.bashrc"
-    echo -e "${GREEN}[Linked]${NC} .bashrc -> $HOME/.bashrc"
-fi

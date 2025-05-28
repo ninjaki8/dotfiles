@@ -18,7 +18,8 @@ echo "Checking installed packages from $PACKAGE_FILE..."
 
 # Check if yay is available
 if ! command -v yay &> /dev/null; then
-    echo -e "${RED}Warning: 'yay' is not installed. AUR package checks may fail.${RESET}"
+    echo -e "${RED}Error: 'yay' is not installed.${RESET}"
+    exit 1
 fi
 
 while IFS= read -r line || [[ -n "$line" ]]; do
