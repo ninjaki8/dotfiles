@@ -100,14 +100,6 @@
     "tray": {
         "spacing": 10
     },
-    "custom/updates": {
-        "exec": "~/.config/scripts/updates.sh",
-        "interval": 600,
-        "format": "{}",
-        "tooltip": true,
-        "tooltip-format": "System Updates",
-        "on-click": "~/.config/scripts/updates.sh"
-    },
     "custom/pacman": {
         "format": "󰏖 {}",
         "interval": 3600, // every hour
