@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMatrix in JS</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
+      font-family: 'Courier New', monospace;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      z-index: 0;
+    }
+
+    .center-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .info {
+      color: #00ff41;
+      font-size: 42px;
+      opacity: 0.9;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 25px;
+      text-align: center;
+      font-family: 'Courier New', monospace;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+    }
+
+    .cursor {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      50% {
+        opacity: 1;
+      }
+
+      51%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .matrix-char {
+      display: inline;
+      opacity: 0;
+      color: #fff;
+      text-shadow: 0 0 5px #00ff41;
+      white-space: pre;
+    }
+
+    .matrix-char.active {
+      animation: matrixReveal 0.3s ease-out forwards;
+    }
+
+    @keyframes matrixReveal {
+      0% {
+        opacity: 0;
+        transform: scale(1.5);
+        color: #fff;
+        text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+        color: #fff;
+        text-shadow: 0 0 15px #00ff41, 0 0 30px #00ff41;
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        color: #00ff41;
+        text-shadow: 0 0 5px #00ff41;
+      }
+    }
+
+    .controls {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+      color: #00ff41;
+      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #00ff41;
+    }
+
+    .speed-control {
+      margin: 10px 0;
+    }
+
+    .speed-control label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .speed-display {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .speed-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin: 5px 0;
+    }
+
+    .speed-btn {
+      background: #00ff41;
+      color: black;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+
+    .speed-btn:hover {
+      background: #00cc33;
+    }
+
+    .ms-display {
+      color: #00ff41;
+      font-weight: bold;
+      min-width: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="cmatrix"></canvas>
+  <div class="center-box" id="startScreen">
+    <div class="info" id="traceText">
+      <span class="cursor" id="cursor">█</span>
+    </div>
+  </div>
+
+  <div class="controls" id="controls" style="display: none;">
+    <div class="speed-control">
+      <label>Animation Speed: <span class="speed-display" id="speedDisplay">Normal</span></label>
+      <div class="speed-buttons">
+        <button class="speed-btn" id="slowerBtn">Slower</button>
+        <span class="ms-display" id="msDisplay">30ms</span>
+        <button class="speed-btn" id="fasterBtn">Faster</button>
+      </div>
+    </div>
+    <div style="font-size: 12px; margin-top: 10px; opacity: 0.8;">
+      <div>Left/Right arrows also adjust speed</div>
+      <div>Press 'R' to reset | 'H' to hide/show controls</div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('cmatrix');
+    const ctx = canvas.getContext('2d');
+    const startScreen = document.getElementById('startScreen');
+    const controls = document.getElementById('controls');
+    const speedDisplay = document.getElementById('speedDisplay');
+    const msDisplay = document.getElementById('msDisplay');
+    const slowerBtn = document.getElementById('slowerBtn');
+    const fasterBtn = document.getElementById('fasterBtn');
+    const traceText = document.getElementById('traceText');
+    const cursor = document.getElementById('cursor');
+
+    let animationSpeed = 30; // milliseconds between frames
+    let animationInterval;
+    let isStarted = false;
+    let traceAnimationStarted = false;
+
+    // Resize canvas to full screen
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initializeDrops();
+    }
+
+    const chars = 'アァイィウヴエェオカキクケコサシスセソタチツテトナニヌネノABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const fontSize = 11;
+    let columns;
+    let drops;
+
+    function initializeDrops() {
+      columns = Math.floor(canvas.width / fontSize);
+      drops = Array(columns).fill(1);
+    }
+
+    function updateSpeedDisplay(speed) {
+      msDisplay.textContent = speed + 'ms';
+      if (speed >= 100) speedDisplay.textContent = 'Very Slow';
+      else if (speed >= 60) speedDisplay.textContent = 'Slow';
+      else if (speed >= 40) speedDisplay.textContent = 'Normal';
+      else if (speed >= 25) speedDisplay.textContent = 'Fast';
+      else if (speed >= 15) speedDisplay.textContent = 'Very Fast';
+      else speedDisplay.textContent = 'Ludicrous';
+    }
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.font = `${fontSize}px monospace`;
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        const x = i * fontSize;
+        const y = drops[i] * fontSize;
+
+        const gradient = ctx.createLinearGradient(x, y - fontSize * 10, x, y);
+        gradient.addColorStop(0, 'rgba(0, 255, 65, 0.1)');
+        gradient.addColorStop(0.8, 'rgba(0, 255, 65, 0.8)');
+        gradient.addColorStop(1, 'rgba(255, 255, 255, 1)');
+        ctx.fillStyle = gradient;
+        ctx.fillText(text, x, y);
+
+        if (y > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    function startAnimation() {
+      if (animationInterval) clearInterval(animationInterval);
+      animationInterval = setInterval(draw, animationSpeed);
+      isStarted = true;
+    }
+
+    function startTraceAnimation() {
+      if (traceAnimationStarted) return;
+      traceAnimationStarted = true;
+
+      const part1 = "Trace program:";
+      const part2 = " running";
+      let charIndex = 0;
+
+      // First, blink cursor for 2 seconds
+      setTimeout(() => {
+        // Start typing first part
+        const typeInterval = setInterval(() => {
+          if (charIndex < part1.length) {
+            const char = part1[charIndex];
+            const span = document.createElement('span');
+            span.className = 'matrix-char';
+            span.textContent = char;
+
+            // Insert before cursor
+            traceText.insertBefore(span, cursor);
+
+            // Trigger animation
+            setTimeout(() => span.classList.add('active'), 10);
+            charIndex++;
+          } else {
+            // Finished part 1
+            clearInterval(typeInterval);
+
+            // 1 second pause, then continue with part 2
+            setTimeout(() => {
+              charIndex = 0;
+              const typeInterval2 = setInterval(() => {
+                if (charIndex < part2.length) {
+                  const char = part2[charIndex];
+                  const span = document.createElement('span');
+                  span.className = 'matrix-char';
+                  span.textContent = char;
+
+                  // Insert before cursor
+                  traceText.insertBefore(span, cursor);
+
+                  // Trigger animation
+                  setTimeout(() => span.classList.add('active'), 10);
+                  charIndex++;
+                } else {
+                  clearInterval(typeInterval2);
+                  // Hide cursor after typing is complete
+                  setTimeout(() => {
+                    cursor.style.display = 'none';
+                    // Start matrix after animation completes
+                    setTimeout(() => {
+                      startScreen.style.display = 'none';
+                      controls.style.display = 'block';
+                      startAnimation();
+                    }, 1000);
+                  }, 500);
+                }
+              }, 50); // Changed from 100ms to 50ms - 500ms faster
+            }, 1000); // 1 second pause
+          }
+        }, 50); // Changed from 100ms to 50ms - 500ms faster
+      }, 2000); // Wait 2 seconds before starting to type
+    }
+
+    function startMatrix() {
+      if (isStarted) return;
+      isStarted = true;
+    }
+
+    // Event listeners
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Speed control buttons
+    slowerBtn.addEventListener('click', function () {
+      animationSpeed = Math.min(100, animationSpeed + 10);
+      updateSpeedDisplay(animationSpeed);
+      if (isStarted && animationInterval) {
+        startAnimation();
+      }
+    });
+
+    fasterBtn.addEventListener('click', function () {
+      animationSpeed = Math.max(10, animationSpeed - 10);
+      updateSpeedDisplay(animationSpeed);
+      if (isStarted && animationInterval) {
+        startAnimation();
+      }
+    });
+
+    // Keyboard controls
+    document.addEventListener('keydown', function (e) {
+      if (!isStarted) {
+        return; // Don't allow skipping
+      }
+
+      switch (e.key.toLowerCase()) {
+        case 'r':
+          // Reset
+          drops.fill(1);
+          ctx.fillStyle = 'black';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          break;
+        case 'h':
+          // Hide/show controls
+          controls.style.display = controls.style.display === 'none' ? 'block' : 'none';
+          break;
+        case 'arrowleft':
+          // Slower
+          animationSpeed = Math.min(100, animationSpeed + 10);
+          updateSpeedDisplay(animationSpeed);
+          if (isStarted && animationInterval) {
+            startAnimation();
+          }
+          break;
+        case 'arrowright':
+          // Faster  
+          animationSpeed = Math.max(10, animationSpeed - 10);
+          updateSpeedDisplay(animationSpeed);
+          if (isStarted && animationInterval) {
+            startAnimation();
+          }
+          break;
+      }
+    });
+
+    // Initialize speed display and start trace animation
+    updateSpeedDisplay(animationSpeed);
+    startTraceAnimation();
+  </script>
+</body>
+
+</html>
