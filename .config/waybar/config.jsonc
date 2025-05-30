@@ -34,11 +34,10 @@
         "format-icons": {
             "1": "", // Terminal
             "2": "", // Browser
-            "3": "󰨞", // Code
-            "4": ""  // Files
+            "3": "󰨞"  // Code
         },
         "persistent-workspaces": {
-            "*": 4
+            "*": 3
         }
     },
     "hyprland/window": {
