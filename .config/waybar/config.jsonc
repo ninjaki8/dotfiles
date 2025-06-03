@@ -10,19 +10,31 @@
     "margin-bottom": 10,
     "modules-left": [
         "custom/pacman",
-        "custom/layout"
+        "custom/layout",
+        "cpu",
+        "memory"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "hyprland/scratchpad"
     ],
     "modules-right": [
         "tray",
         "hyprland/language",
-        "clock",
-        "network",
         "pulseaudio",
+        "clock#tray",
         "custom/wlogout"
     ],
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": [
+            "",
+            ""
+        ],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
     "hyprland/workspaces": {
         "all-outputs": false,
         "on-click": "activate",
@@ -30,7 +42,7 @@
         "format-icons": {
             "1": "", // Terminal
             "2": "", // Browser
-            "3": "󰨞"  // Code
+            "3": "󰨞" // Code
         },
         "persistent-workspaces": {
             "*": 3
@@ -46,7 +58,7 @@
         "on-click": "gnome-calendar"
     },
     "clock#tray": {
-        "format": "{:%H:%M}",
+        "format": "{:%I:%M %p}",
         "tooltip": false
     },
     "hyprland/language": {
@@ -69,7 +81,7 @@
         "interval": 1
     },
     "pulseaudio": {
-        "format": "",
+        "format": " {volume}%",
         "format-muted": " Muted",
         "scroll-step": 5,
         "on-scroll-up": "~/.config/scripts/volume.sh 5",

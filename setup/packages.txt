@@ -48,3 +48,4 @@ gnome-calculator
 gnome-calendar
 gnome-text-editor
 android-tools
+yazi

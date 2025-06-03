@@ -1,6 +1,7 @@
 * {
     font-family: "Noto Sans", sans-serif;
     font-weight: bold;
+    border-radius: 8px;
 }
 
 window#waybar {
@@ -16,12 +17,12 @@ window#waybar {
 }
 
 #workspaces button.persistent {
-    font-size: 28px;
+    font-size: 22px;
 }
 
 #workspaces button {
     padding: 0 20px;
-    color: #e94560;
+    color: #fff;
     /* Neon pink */
     border: none;
 }
@@ -37,13 +38,17 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: #e94560;
+    background: #187a04;
     /* Neon pink */
     color: #fff;
     border-radius: 28px 0 28px 0px;
 }
 
-#custom-wlogout,
+#custom-wlogout{
+    font-size: 22px;
+    padding: 0 10px;
+}
+
 #custom-layout,
 #language,
 #custom-pacman,
@@ -56,11 +61,3 @@ window#waybar {
     padding: 0 10px;
     font-size: 14px;
 }
-
-#tray{
-    margin-right: 10px;
-}
-
-/* #tray>* {
-    padding: 0 5px;
-} */
