@@ -1,5 +1,5 @@
 # CURSOR
-export XCURSOR_THEME=Dracula-cursors
+#export XCURSOR_THEME=Dracula-cursors
 export HYPRCURSOR_SIZE=24
 export XCURSOR_SIZE=24
 
