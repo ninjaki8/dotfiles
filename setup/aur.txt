@@ -1,5 +1,0 @@
-catppuccin-gtk-theme-frappe
-visual-studio-code-bin
-waypaper
-wlogout
-yay

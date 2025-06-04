@@ -22,7 +22,7 @@ window#waybar {
 
 #workspaces button {
     padding: 0 20px;
-    color: #fff;
+    color: #E95420;
     /* Neon pink */
     border: none;
 }
@@ -38,7 +38,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: #187a04;
+    background: #E95420;
     /* Neon pink */
     color: #fff;
     border-radius: 28px 0 28px 0px;

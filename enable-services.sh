@@ -24,7 +24,7 @@ ALREADY_ENABLED_SERVICES=()
 # Format: "service_name:type" where type is either "system" or "user"
 SERVICES=(
     "bluetooth:system"
-    "ly:system"
+    "greetd:system"
     "hyprpaper:user"
     "hyprpolkitagent:user"
     "waybar:user"
