@@ -1,14 +1,22 @@
-[settings]
-prompt = Applications
-term = foot
-hide_scroll = true
-insensitive = true
-allow_images = true
-allow_markup = true
-image_size = 48
-columns = 1
-width = 33%
-location = center
-lines = 10
-no_actions = true
-gtk_dark = true
+# Wofi Configuration
+# Save as ~/.config/wofi/config
+
+# Display Settings
+prompt=Search...
+width=28%
+show=drun
+term=foot
+
+# Appearance
+gtk_dark=false
+show_icons=true
+image_size=48
+
+# Behavior
+insensitive=true
+no_actions=true
+hide_scroll=false
+print_command=true
+layer=overlay
+single_click=true
+allow_images=true

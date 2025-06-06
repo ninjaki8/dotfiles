@@ -30,3 +30,5 @@ visual-studio-code-bin
 mpv
 imagemagick
 stacer-bin
+eza
+yad

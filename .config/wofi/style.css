@@ -1,11 +1,98 @@
+/* Yaru-dark theme for wofi */
+
 window {
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 10px;
+    margin: 0px;
+    border: 2px solid #3C3C3C;
+    background-color: rgba(44, 44, 44, 0.95);
+    border-radius: 8px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+#input {
+    margin: 14px;
+    padding: 12px 16px;
+    border: 2px solid #484848;
+    background-color: #383838;
+    color: #FFFFFF;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+#input:focus {
+    border-color: #E95420;
+    box-shadow: 0 0 0 2px rgba(233, 84, 32, 0.2);
+}
+
+#inner-box {
+    margin: 8px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 400;
 }
 
 #entry {
-  padding: 5px;
+    padding: 8px 16px;
+    margin: 2px 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #FFFFFF;
+    transition: all 0.15s ease;
 }
 
+#entry:selected {
+    background-color: #E95420;
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(233, 84, 32, 0.3);
+}
 
+#entry:hover {
+    background-color: #484848;
+}
+
+#entry:selected:hover {
+    background-color: #E95420;
+}
+
+/* Scrollbar styling */
+scrollbar {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: #E95420;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+scrollbar slider:hover {
+    background-color: #5A5A5A;
+}
+
+/* Icon styling if using wofi with icons */
+#img {
+    margin-right: 8px;
+    opacity: 0.9;
+    background: transparent;
+}
