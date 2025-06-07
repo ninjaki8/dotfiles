@@ -20,12 +20,12 @@ nwg-look
 papirus-icon-theme
 noto-fonts
 ttf-noto-nerd
+gnome-themes-extra
 firefox
 vulkan-radeon
 yazi
 greetd
 greetd-regreet
-yaru-gtk-theme
 visual-studio-code-bin
 mpv
 imagemagick

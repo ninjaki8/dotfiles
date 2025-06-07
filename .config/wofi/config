@@ -8,7 +8,6 @@ show=drun
 term=foot
 
 # Appearance
-gtk_dark=true
 show_icons=true
 image_size=48
 
