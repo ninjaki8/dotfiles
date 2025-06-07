@@ -100,7 +100,7 @@
     "custom/pacman": {
         "format": "󰣇 {}",
         "interval": 3600, // every hour
-        "exec": "yay -Qu | wc -l", // # of updates
+        "exec": "checkupdates | wc -l", // # of updates
         "exec-if": "exit 0", // always run; consider advanced run conditions
         "on-click": "foot -e sudo yay; pkill -SIGRTMIN+8 waybar", // update system
         "signal": 8

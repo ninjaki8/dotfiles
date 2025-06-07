@@ -32,3 +32,5 @@ imagemagick
 stacer-bin
 eza
 yad
+socat
+jq
