@@ -34,3 +34,4 @@ eza
 yad
 socat
 jq
+usbutils
