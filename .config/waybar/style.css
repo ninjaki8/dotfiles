@@ -1,54 +1,58 @@
 * {
     font-family: "Noto Sans", sans-serif;
-    font-weight: bold;
     border-radius: 8px;
 }
 
 window#waybar {
-    background: linear-gradient(to bottom, #282a36 0%, #202023 100%);
-    color: #ffffff;
-    font-size: 16px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #workspaces {
-    background: rgba(255, 255, 255, 0.1);
     margin: 0 15px;
     border-radius: 28px 0 28px 0px;
 }
 
+#workspaces button:nth-child(1) {
+    /* Style for workspace 1 */
+    color: #fff;
+}
+
+#workspaces button:nth-child(2) {
+    /* Style for workspace 2 */
+    color: #E66000;
+}
+
+#workspaces button:nth-child(3) {
+    /* Style for workspace 3 */
+    color: #24ABF1;
+}
+
 #workspaces button.persistent {
-    font-size: 22px;
+    font-size: 28px;
 }
 
 #workspaces button {
     padding: 0 20px;
-    color: #E95420;
-    /* Neon pink */
     border: none;
 }
 
 #workspaces button.empty {
-    color: #5c5c5c;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 #workspaces button:hover {
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 28px 0 28px 0px;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 #workspaces button.active {
-    background: #E95420;
-    /* Neon pink */
-    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 28px 0 28px 0px;
 }
 
-#custom-wlogout{
-    font-size: 22px;
-    padding: 0 10px;
-}
-
+#custom-powermenu,
 #custom-layout,
 #language,
 #custom-pacman,
@@ -58,6 +62,27 @@ window#waybar {
 #network,
 #pulseaudio,
 #bluetooth {
-    padding: 0 10px;
+    padding: 0 15px;
     font-size: 14px;
+}
+
+#custom-powermenu {
+    background: center no-repeat url("/usr/share/icons/Papirus-Dark/24x24/panel/system-shutdown-panel.svg");
+    background-size: 30px;
+}
+
+#custom-pacman.none {
+    background: center no-repeat url("/usr/share/icons/Papirus-Dark/24x24/panel/update-none.svg");
+}
+
+#custom-pacman.updates {
+    background: center no-repeat url("/usr/share/icons/Papirus-Dark/24x24/panel/update-high.svg");
+}
+
+#pulseaudio {
+    background: center no-repeat url("/usr/share/icons/Papirus-Dark/24x24/panel/audio-volume-high.svg");
+}
+
+#network {
+    background: center no-repeat url("/usr/share/icons/breeze-dark/status/24/network-wired.svg");
 }

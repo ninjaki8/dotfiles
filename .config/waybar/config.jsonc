@@ -9,7 +9,6 @@
     "margin-right": 10,
     "margin-bottom": 10,
     "modules-left": [
-        "custom/pacman",
         "custom/layout",
         "cpu",
         "memory"
@@ -20,18 +19,20 @@
     "modules-right": [
         "tray",
         "hyprland/language",
+        "custom/pacman",
+        "network",
         "pulseaudio",
-        "clock#tray",
-        "custom/wlogout"
+        "custom/powermenu",
+        "clock"
     ],
     "hyprland/workspaces": {
         "all-outputs": false,
         "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
-            "1": "", // Terminal
+            "1": "", // Terminal
             "2": "", // Browser
-            "3": "󰨞" // Code
+            "3": "󰨞"  // Code
         },
         "persistent-workspaces": {
             "*": 3
@@ -42,19 +43,13 @@
         "icon": true
     },
     "clock": {
-        "format": "{:%b %e %I:%M %p}",
-        "tooltip": false,
-        "on-click": "gnome-calendar"
-    },
-    "clock#tray": {
         "format": "{:%I:%M %p}",
         "tooltip": false
     },
     "hyprland/language": {
-        "format": "{}",
-        "format-en": "en",
-        "format-gr": "gr",
-        "keyboard-name": "keychron-lemokey-x1-keyboard"
+        "format": "{shortDescription}",
+        "keyboard-name": "keychron-lemokey-x1-keyboard",
+        "tooltip": false
     },
     "cpu": {
         "format": " {usage}%"
@@ -63,15 +58,15 @@
         "format": " {used:0.1f}G"
     },
     "network": {
-        "interface": "enp34s0",
-        "format": "󰈀",
-        "format-disconnected": "󰖪 No Net",
-        "tooltip-format": "IP: {ipaddr}\nDown: {bandwidthDownBytes}\nUp: {bandwidthUpBytes}",
-        "interval": 1
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " ",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": "Network\n{ifname} - {ipaddr}"
     },
     "pulseaudio": {
-        "format": " {volume}%",
-        "format-muted": " Muted",
+        "format": " ",
+        "format-muted": "",
         "scroll-step": 5,
         "on-scroll-up": "~/.config/scripts/volume.sh 5",
         "on-scroll-down": "~/.config/scripts/volume.sh -5",
@@ -98,25 +93,31 @@
         "spacing": 10
     },
     "custom/pacman": {
-        "format": "󰣇 {}",
+        "format": "{icon}",
+        "format-icons": {
+            "none": " ",
+            "updates": " "
+        },
         "interval": 3600, // every hour
-        "exec": "checkupdates | wc -l", // # of updates
+        "exec": "~/.config/scripts/updates.sh",
         "exec-if": "exit 0", // always run; consider advanced run conditions
-        "on-click": "foot -e sudo yay; pkill -SIGRTMIN+8 waybar", // update system
-        "signal": 8
+        "on-click": "foot -e bash -c 'sudo yay; read -p \"Press Enter to close...\"'; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8,
+        "return-type": "json",
+        "tooltip-format": "System Updates\n{text}"
     },
-    "custom/wlogout": {
-        "format": "",
+    "custom/powermenu": {
+        "format": " ",
         "tooltip": true,
         "tooltip-format": "Power Menu",
-        "on-click": "~/.config/scripts/wlogout.sh"
+        "on-click": "~/.config/scripts/power-menu.sh"
     },
     "custom/layout": {
         "exec": "~/.config/scripts/toggle-layout.sh layout",
         "on-click": "~/.config/scripts/toggle-layout.sh toggle",
         "interval": "once",
         "signal": 9,
-        "format": "{text}",
+        "format": " {text}",
         "format-icons": {
             "dwindle": "󰕴",
             "master": "󰙀"
