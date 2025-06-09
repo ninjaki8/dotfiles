@@ -1,3 +1,10 @@
+[background]
+# Path to the background image
+path = "/etc/greetd/Fluent-building-night.png"
+
+# Available values: "Fill", "Contain", "Cover", "ScaleDown"
+fit = "Fill"
+
 [GTK]
 application_prefer_dark_theme = true
 
