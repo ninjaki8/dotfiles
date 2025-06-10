@@ -60,7 +60,7 @@ echo "# INSTALLING APPLICATION CONFIGURATIONS"
 echo "# -----------------------------------------------------"
 
 # Allowed application config directories
-apps=("foot" "hypr" "wofi" "scripts" "waybar" "mako" "uwsm")
+apps=("foot" "hypr" "wofi" "scripts" "waybar" "mako" "uwsm" "quickshell")
 
 SCRIPT_DIR="$HOME/dotfiles/.config"
 CONFIG_DIR="$HOME/.config"
