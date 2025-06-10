@@ -44,9 +44,7 @@
     },
     "clock": {
         "format": "{:%I:%M %p}",
-        "tooltip": false,
-        "on-click":"eww open calendar_window",
-        "on-click-right":"eww close calendar_window"
+        "tooltip": false
     },
     "hyprland/language": {
         "format": "{shortDescription}",
