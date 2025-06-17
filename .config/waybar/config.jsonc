@@ -8,6 +8,7 @@
     "margin-left": 10,
     "margin-right": 10,
     "margin-bottom": 10,
+    "reload_style_on_change": true,
     "modules-left": [
         "custom/layout",
         "cpu",
@@ -28,14 +29,23 @@
     "hyprland/workspaces": {
         "all-outputs": false,
         "on-click": "activate",
-        "format": "{icon}",
+        "format": "{icon}{windows}",
         "format-icons": {
-            "1": "", // Terminal
-            "2": "", // Browser
-            "3": "󰨞"  // Code
+            "1": "󰬺",
+            "2": "󰬻",
+            "3": "󰬼",
+            "4": "󰬽",
+            "5": "󰬾"
+        },
+        "format-window-separator": " ",
+        "window-rewrite-default": "",
+        "window-rewrite": {
+            "firefox": "<span foreground='#E66000'></span>",
+            "foot": "<span foreground='#CCCCCC'></span>",
+            "code": "<span foreground='#24ABF1'>󰨞</span>"
         },
         "persistent-workspaces": {
-            "*": 3
+            "*": 5
         }
     },
     "hyprland/window": {
@@ -59,13 +69,13 @@
     },
     "network": {
         "format-wifi": " {essid} ({signalStrength}%)",
-        "format-ethernet": " ",
+        "format-ethernet": "󰲝",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected",
         "tooltip-format": "Network\n{ifname} - {ipaddr}"
     },
     "pulseaudio": {
-        "format": " ",
+        "format": "󰕾",
         "format-muted": "",
         "scroll-step": 5,
         "on-scroll-up": "~/.config/scripts/volume.sh 5",
@@ -95,8 +105,8 @@
     "custom/pacman": {
         "format": "{icon}",
         "format-icons": {
-            "none": " ",
-            "updates": " "
+            "none": "󰏖",
+            "updates": "󱧘"
         },
         "interval": 3600, // every hour
         "exec": "~/.config/scripts/updates.sh",
@@ -107,7 +117,7 @@
         "tooltip-format": "System Updates\n{text}"
     },
     "custom/powermenu": {
-        "format": " ",
+        "format": "",
         "tooltip": true,
         "tooltip-format": "Power Menu",
         "on-click": "~/.config/scripts/power-menu.sh"

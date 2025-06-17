@@ -4,28 +4,14 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0);
+    border: 0px solid rgba(255, 255, 255, 0.1);
 }
 
 #workspaces {
+    background: rgba(0, 0, 0, 1);
     margin: 0 15px;
     border-radius: 28px 0 28px 0px;
-}
-
-#workspaces button:nth-child(1) {
-    /* Style for workspace 1 */
-    color: #fff;
-}
-
-#workspaces button:nth-child(2) {
-    /* Style for workspace 2 */
-    color: #E66000;
-}
-
-#workspaces button:nth-child(3) {
-    /* Style for workspace 3 */
-    color: #24ABF1;
 }
 
 #workspaces button.persistent {
@@ -65,23 +51,16 @@ window#waybar {
     font-size: 14px;
 }
 
-#custom-powermenu {
-    background: center no-repeat url("/usr/share/icons/Papirus-Dark/24x24/panel/system-shutdown-panel.svg");
-    background-size: 30px;
+#custom-pacman,
+#network,
+#pulseaudio{
+    font-size: 20px;
 }
 
 #custom-pacman.none {
-    background: center no-repeat url("/usr/share/icons/Papirus-Dark/24x24/panel/update-none.svg");
+    color: rgb(13, 211, 13);
 }
 
 #custom-pacman.updates {
-    background: center no-repeat url("/usr/share/icons/Papirus-Dark/24x24/panel/update-high.svg");
-}
-
-#pulseaudio {
-    background: center no-repeat url("/usr/share/icons/Papirus-Dark/24x24/panel/audio-volume-high.svg");
-}
-
-#network {
-    background: center no-repeat url("/usr/share/icons/breeze-dark/status/24/network-wired.svg");
+    color: rgb(236, 10, 10);
 }
