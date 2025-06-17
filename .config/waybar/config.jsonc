@@ -27,7 +27,7 @@
         "clock"
     ],
     "hyprland/workspaces": {
-        "all-outputs": false,
+        "show-special": true,
         "on-click": "activate",
         "format": "{icon}{windows}",
         "format-icons": {
@@ -35,14 +35,19 @@
             "2": "󰬻",
             "3": "󰬼",
             "4": "󰬽",
-            "5": "󰬾"
+            "5": "󰬾",
+            "special":""
         },
         "format-window-separator": " ",
-        "window-rewrite-default": "",
+        "window-rewrite-default": "<span font_size='50%'>{class}</span>",
         "window-rewrite": {
             "firefox": "<span foreground='#E66000'></span>",
             "foot": "<span foreground='#CCCCCC'></span>",
-            "code": "<span foreground='#24ABF1'>󰨞</span>"
+            "code": "<span foreground='#24ABF1'>󰨞</span>",
+            "com.stremio.stremio": "<span foreground='#915EFF'>󱉺</span>",
+            "waypaper": "<span foreground='#6C9EFF'></span>",
+            "nwg-displays": "<span foreground='#40C4FF'>󰍹</span>",
+            "nwg-look": "<span foreground='#FFB347'></span>"
         },
         "persistent-workspaces": {
             "*": 5
